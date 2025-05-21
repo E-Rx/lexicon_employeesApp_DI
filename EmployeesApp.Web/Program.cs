@@ -16,6 +16,7 @@ namespace EmployeesApp.Web
 
             builder.Services.AddScoped<MyLogFilterAttribute>();
 
+            // builder.Services.AddSingleton<IEmployeeService, EmployeeService>();
             builder.Services.AddSingleton<IEmployeeService, OtherEmployeeService>();
             var app = builder.Build();
 
