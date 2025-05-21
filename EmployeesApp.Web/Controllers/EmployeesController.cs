@@ -7,7 +7,6 @@ namespace EmployeesApp.Web.Controllers
 {
     public class EmployeesController(IEmployeeService service) : Controller
     {
-        //static readonly EmployeeService service = new();
 
         [HttpGet("")]
         public IActionResult Index()

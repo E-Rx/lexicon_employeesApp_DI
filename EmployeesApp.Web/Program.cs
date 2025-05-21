@@ -8,7 +8,7 @@ namespace EmployeesApp.Web
         {
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddControllersWithViews();
-            builder.Services.AddSingleton<IEmployeeService, EmployeeService>();
+            builder.Services.AddSingleton<IEmployeeService, OtherEmployeeService>();
             var app = builder.Build();
             app.UseStaticFiles();
             app.MapControllers();

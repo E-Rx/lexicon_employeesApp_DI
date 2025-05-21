@@ -2,39 +2,28 @@
 
 namespace EmployeesApp.Web.Services
 {
-    public class EmployeeService : IEmployeeService
+    public class OtherEmployeeService : IEmployeeService
     {
         List<Employee> employees =
         [
             new Employee()
             {
-                Id = 562,
-                Name = "Anders Hejlsberg",
-                Email = "Anders.Hejlsberg@outlook.com",
+                Id = 568,
+                Name = "p1",
+                Email = "p1@mail.com",
             },
             new Employee()
             {
-                Id = 62,
-                Name = "Kathleen Dollard",
-                Email = "k.d@outlook.com",
+                Id = 66,
+                Name = "p2",
+                Email = "p2@mail.com",
             },
+            
             new Employee()
             {
-                Id = 15662,
-                Name = "Mads Torgersen",
-                Email = "Admin.Torgersen@outlook.com",
-            },
-            new Employee()
-            {
-                Id = 52,
-                Name = "Scott Hanselman",
-                Email = "s.h@outlook.com",
-            },
-            new Employee()
-            {
-                Id = 563,
-                Name = "Jon Skeet",
-                Email = "j.s@outlook.com",
+                Id = 444,
+                Name = "Jj",
+                Email = "jj@mail.com"
             },
         ];
 
@@ -47,7 +36,7 @@ namespace EmployeesApp.Web.Services
 
         public Employee[] GetAll() => [.. employees.OrderBy(e => e.Name)];
 
-      
+
 
         public Employee GetById(int id) => employees
             .Single(e => e.Id == id);
