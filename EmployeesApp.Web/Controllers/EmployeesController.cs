@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EmployeesApp.Web.Controllers
 {
-    public class EmployeesController(IEmployeeService service) : Controller
+    public class EmployeesController(IEmployeeService service, ILogger<EmployeesController> logger) : Controller
     {
 
         [HttpGet("")]
@@ -24,7 +24,7 @@ namespace EmployeesApp.Web.Controllers
                 })
                 .ToArray()
             };
-
+            logger.LogInformation($"Employees: {viewModel.EmployeeVMs.Length}");
             return View(viewModel);
         }
 
