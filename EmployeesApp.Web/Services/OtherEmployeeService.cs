@@ -9,21 +9,21 @@ namespace EmployeesApp.Web.Services
             new Employee()
             {
                 Id = 568,
-                Name = "p1",
-                Email = "p1@mail.com",
+                Name = "Louis Pottier",
+                Email = "l.pottier@mail.com",
             },
             new Employee()
             {
                 Id = 66,
-                Name = "p2",
-                Email = "p2@mail.com",
+                Name = "Stephane Maurand",
+                Email = "admin.stef@mail.com",
             },
             
             new Employee()
             {
                 Id = 444,
-                Name = "Jj",
-                Email = "jj@mail.com"
+                Name = "Caroline Joly",
+                Email = "caro.j@mail.com"
             },
         ];
 
@@ -33,9 +33,7 @@ namespace EmployeesApp.Web.Services
             employees.Add(employee);
         }
 
-
         public Employee[] GetAll() => [.. employees.OrderBy(e => e.Name)];
-
 
 
         public Employee GetById(int id) => employees
