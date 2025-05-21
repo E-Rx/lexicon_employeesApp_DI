@@ -4,7 +4,7 @@ namespace EmployeesApp.Web.Services
 {
     public class EmployeeService
     {
-        readonly List<Employee> employees =
+        List<Employee> employees =
         [
             new Employee()
             {
