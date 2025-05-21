@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EmployeesApp.Web.Controllers
 {
-    public class EmployeesController(EmployeeService service) : Controller
+    public class EmployeesController(IEmployeeService service) : Controller
     {
         //static readonly EmployeeService service = new();
 
