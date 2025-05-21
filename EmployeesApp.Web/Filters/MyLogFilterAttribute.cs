@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.Filters;
-using Microsoft.Extensions.Logging;
 
-namespace TonProjet.Filters
+namespace EmployeesApp.Web.Filters
 {
     public class MyLogFilterAttribute : ActionFilterAttribute
     {

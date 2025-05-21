@@ -2,12 +2,18 @@
 using EmployeesApp.Web.Services;
 using EmployeesApp.Web.Views.Employees;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System.Linq;
+
+
 
 namespace EmployeesApp.Web.Controllers;
 
 public class EmployeesController(IEmployeeService service, ILogger<EmployeesController> logger) : Controller
+
+// In classic constructor injection, we need readonly fields to store dependencies.
+// With C# primary constructors, these fields and assignments are implicit and unnecessary.
+//private readonly IEmployeeService _service;
+//private readonly ILogger<EmployeesController> _logger;
+
 {
     [HttpGet("")]
     public IActionResult Index()

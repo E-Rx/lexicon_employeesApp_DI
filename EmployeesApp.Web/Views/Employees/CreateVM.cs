@@ -14,7 +14,7 @@ namespace EmployeesApp.Web.Views.Employees
         [Required(ErrorMessage = "You must specify an e-mail address")]
         public required string Email { get; set; }
 
-        [Display(Name = "2 + 2 = ?")]
+        [Display(Name = "What is 2 + 2 = ?")]
         [Required(ErrorMessage = "You must answer the question")]
         [Range(4, 4, ErrorMessage = "Wrong answer")]
         public required int BotCheck { get; set; }
